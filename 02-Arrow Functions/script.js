@@ -3,19 +3,33 @@
 // };
 // console.log(hitungTotalMenit(3));
 
-const hitungTotalMenit = (jam) => jam * 60;
-console.log(hitungTotalMenit(3)); 
+// const hitungTotalMenit = (jam) => jam * 60;
+// console.log(hitungTotalMenit(3)); 
 
-// ===================================================================
-// Praktik
-// ==================================================================
+// // ===================================================================
+// // Praktik
+// // ==================================================================
 
-// 1. function biasa dan arrow function ekpresi satu baris
-function kaliDua (angka){
-    return angka * 2;
-}
-console.log(kaliDua(2));
+// // 1. function biasa dan arrow function ekpresi satu baris
+// function kaliDua (angka){
+//     return angka * 2;
+// }
+// console.log(kaliDua(2));
+// // Arrow function
+// const tambahDua = (a) => a + 2;
+// console.log(tambahDua(3));
+// // ============================================================
 
-const tambahDua = (a) => a + 2;
-console.log(tambahDua(3));
-
+// // 2. hitung luas Function biasa dan Arrow Function
+// function hitungLuas(panjang, lebar) {
+//     return panjang * lebar;
+// }
+// Arrow function
+// const hitungLuas = (panjang, lebar) => {
+//     const hasil = panjang * lebar;
+//     return hasil;
+// }
+// console.log(hitungLuas(20, 20))
+// Lebih ringkas
+const hitungLuas = (panjang, lebar) => panjang * lebar;
+console.log(hitungLuas(20, 20));
