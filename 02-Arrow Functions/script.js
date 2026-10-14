@@ -59,3 +59,26 @@ const namaAku = (callback) => {
 namaAku(()=>{
     console.log("Selamat Belajar Javascriptnya");
 });
+
+
+const nilaiTerbaik = (nilai, callback)=>{
+    callback(nilai);
+};
+
+nilaiTerbaik(90, (angka)=>{
+    console.log("Nilai: ", angka);
+});
+
+const tampilkanMataKuliah = (nama, callback) =>{
+    callback(nama);
+};
+
+tampilkanMataKuliah("Programman Web", (mataKuliah)=>{
+    console.log("Mata Kuliah Ditampilkan: ", mataKuliah);
+});
+
+const tombol = document.getElementById("tombol");
+
+tombol.addEventListener("click", ()=>{
+    console.log("Tombol Sudah Aktif");
+});
