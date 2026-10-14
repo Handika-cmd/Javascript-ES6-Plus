@@ -31,5 +31,8 @@
 // }
 // console.log(hitungLuas(20, 20))
 // Lebih ringkas
-const hitungLuas = (panjang, lebar) => panjang * lebar;
-console.log(hitungLuas(20, 20));
+// const hitungLuas = (panjang, lebar) => panjang * lebar;
+// console.log(hitungLuas(20, 20));
+
+const durasiJamKuliah = (jamMulai, JamSelesai) => (JamSelesai-jamMulai) * 60;
+console.log(durasiJamKuliah(8, 10));
