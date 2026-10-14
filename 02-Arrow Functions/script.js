@@ -34,5 +34,17 @@
 // const hitungLuas = (panjang, lebar) => panjang * lebar;
 // console.log(hitungLuas(20, 20));
 
-const durasiJamKuliah = (jamMulai, JamSelesai) => (JamSelesai-jamMulai) * 60;
-console.log(durasiJamKuliah(8, 10));
+// const durasiJamKuliah = (jamMulai, JamSelesai) => (JamSelesai-jamMulai) * 60;
+// console.log(durasiJamKuliah(8, 10));
+
+const durasiJamKuliah = (jamMulai, jamSelesai) =>{
+    durasiJam = jamSelesai - jamMulai;
+    return durasiJam
+}
+console.log(`${durasiJamKuliah(7, 10)} jam`);
+
+const durasiMenitKuliah = (jamMulai, jamSelesai) =>{
+    durasiMenit = jamSelesai - jamMulai;
+    return durasiMenit * 60;
+}
+console.log(`${durasiMenitKuliah(8, 10)} menit`)
