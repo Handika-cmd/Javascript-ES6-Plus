@@ -48,3 +48,14 @@ const durasiMenitKuliah = (jamMulai, jamSelesai) =>{
     return durasiMenit * 60;
 }
 console.log(`${durasiMenitKuliah(8, 10)} menit`)
+
+// ==============================================================================
+// CALLBACK 
+const namaAku = (callback) => {
+    console.log("Handika Saputra");
+    callback();
+};
+
+namaAku(()=>{
+    console.log("Selamat Belajar Javascriptnya");
+});
