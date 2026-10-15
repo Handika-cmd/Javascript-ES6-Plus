@@ -69,16 +69,63 @@ nilaiTerbaik(90, (angka)=>{
     console.log("Nilai: ", angka);
 });
 
-const tampilkanMataKuliah = (nama, callback) =>{
-    callback(nama);
+// const tampilkanMataKuliah = (nama, callback) =>{
+//     callback(nama);
+// };
+
+// tampilkanMataKuliah("Programman Web", (mataKuliah)=>{
+//     console.log("Mata Kuliah Ditampilkan: ", mataKuliah);
+// });
+
+// const tombol = document.getElementById("tombolJadwal");
+
+// tombol.addEventListener("click", (event) =>{
+//     console.log(event.type); 
+//     console.log(event.target.id);
+// });
+
+const tampilkanJadwal = (namaMataKuliah) =>{
+    console.log("Jadwal Mata Kuliah: ", namaMataKuliah);
 };
 
-tampilkanMataKuliah("Programman Web", (mataKuliah)=>{
-    console.log("Mata Kuliah Ditampilkan: ", mataKuliah);
-});
-
-const tombol = document.getElementById("tombol");
+const tombol = document.getElementById("tombolJadwal");
 
 tombol.addEventListener("click", ()=>{
-    console.log("Tombol Sudah Aktif");
+    tampilkanJadwal("Senin, 12 Oktober 2026");
+});
+
+// const tampilkanPesan = () => {
+//     console.log("Jadwal kuliah dibuka!");
+// };
+
+// tombol.addEventListener("click", tampilkanPesan());
+
+
+const sapaPengguna = () => {
+    console.log("Halo, Dika!");
+};
+
+tombol.addEventListener("click", sapaPengguna);
+console.log("Halaman siap!");
+
+// Membuat fungsi tampilkan Mata kuliah Fikih
+const tampilkanFikih = (fikih)=>{
+    console.log("Nama Mata Kuliah: ", fikih);
+};
+
+const tombol1 = document.getElementById("tombolFikih");
+
+tombol1.addEventListener("click", ()=>{
+    tampilkanFikih("Fikih");
+});
+
+
+const tampilkanDika = (dika) =>{
+    console.log("Namaku: ", dika);
+};
+
+const tombol2 = document.getElementById("tombolFikih");
+
+tombol2.addEventListener("click", ()=>{
+    tampilkanDika("DIKA");
 });
