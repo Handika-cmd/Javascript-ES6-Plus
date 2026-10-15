@@ -25,3 +25,17 @@ console.log(mk3);
 console.log(mk1);
 
 // Object Destructuring
+const jadwal = {
+    matkul: "Fikih",
+    hari: "Senin",
+    jam: "08.00"
+};
+
+const {matkul, hari, jam} = jadwal;
+console.log(matkul);
+console.log(hari);
+console.log(jam);
+
+
+
+// INGATTTT,, Array memakai posisi, sedangkan Object memakai nama properti.
