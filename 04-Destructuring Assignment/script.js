@@ -12,3 +12,16 @@
 // const {nama, jurusan, semester} = mahasiswa;
 
 // console.log(`Nama Mahasiswa: ${nama} jurusan: ${jurusan} semester: ${semester}`);
+
+// ======================================================================================================
+// ======================================================================================================
+// Array Destructuring
+const mataKuliah = ["Fikih", "Akidah Akhlak", "Bahasa Arab"];
+
+const [mk1, mk2, mk3] = mataKuliah;
+
+console.log(mk2);
+console.log(mk3);
+console.log(mk1);
+
+// Object Destructuring
