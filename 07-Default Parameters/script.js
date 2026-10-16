@@ -7,3 +7,8 @@ sapa();
 
 // ========================================================================
 // Latihan
+const tampilkanProdi = (prodi = "PAI")=>{
+    console.log(`Program Studi: ${prodi}`);
+};
+tampilkanProdi();
+tampilkanProdi("Ekonomi Syariah");
