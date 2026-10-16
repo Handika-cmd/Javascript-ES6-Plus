@@ -18,3 +18,15 @@ function tampilkanPesan(callback){
 tampilkanPesan(()=>{
     console.log("data Selesai");
 });
+
+function muatBerita(callback){
+    console.log("Memuat berita.....");
+
+    setTimeout(()=>{
+        callback();
+    }, 2000);
+};
+
+muatBerita(()=>{
+    console.log("Berita berhasil dimuat.")
+});
