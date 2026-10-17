@@ -7,11 +7,31 @@ janji.then((hasil) => {
 });
 
 // Latihan
-const dataMahasiswa = new Promise((resolve, reject) => {
+const dataMahasiswa = new Promise((resolve, reject)=>{
     reject("Data mahasiswa gagal dimuat..");
 });
 
 dataMahasiswa
+    .catch((error)=>{
+        console.log(error);
+    });
+
+// ===========================================================================================
+// INGATTTT resolve() menandakan Promise berhasil, sedangkan .catch() hanya menangani kegagalan.
+// =======================================================================================
+
+// contoh
+const dataJadwal = new Promise((resolve, reject)=>{
+    const berhasil = false;
+
+    if(berhasil){
+        resolve("Jadwal BERHASIL dimuat");
+    }else{
+        reject("Jadwal GAGAL dimuat");
+    }
+});
+
+dataJadwal
     .then((hasil)=>{
         console.log(hasil);
     })
