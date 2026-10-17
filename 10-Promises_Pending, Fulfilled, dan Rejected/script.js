@@ -67,3 +67,28 @@ export const tugas = new Promise((resolve, reject) => {
         }
     }, 2000);
 });
+
+export const login = new Promise((resolve, reject)=>{
+    const berhasil = false;
+
+    setTimeout(()=>{
+        if (berhasil){
+            resolve("login berhasil");
+        }else{
+            reject("login gagal");
+        }
+    },5000);
+});
+
+
+export const jadwalKuliah = new Promise ((resolve, reject)=>{
+    const berhasil = false;
+
+    setTimeout(()=>{
+        if(berhasil){
+            resolve("Jadwal kuliah berhasil dimuat");
+        }else{
+            reject("Gagal memuat jadwal kuliah");
+        }
+    }, 2000);
+});
