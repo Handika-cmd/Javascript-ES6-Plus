@@ -1,6 +1,7 @@
-
+// ==============================================
+// Membuat layanan kopi
 const buatKopi = new Promise((resolve, reject) => {
-    let adaKopi = false; // Coba ubah nanti jadi false
+    let adaKopi = true; // Coba ubah nanti jadi false
     
     console.log("Barista sedang meracik kopi...");
     
@@ -14,10 +15,10 @@ const buatKopi = new Promise((resolve, reject) => {
 });
 export {buatKopi};
 
-
-
+// ====================================
+// coba waktu
 const coba = new Promise((resolve, reject)=>{
-    const waktu = 5000;
+    const waktu = 1000;
     
     setTimeout(()=>{
         if(waktu < 5000){
@@ -28,3 +29,20 @@ const coba = new Promise((resolve, reject)=>{
     }, waktu);
 });
 export{coba};
+
+// ======================================
+// Buat fungsi yang mengembalikan promise
+function pesanKopi(namaMenu){
+    return new Promise((resolve, reject)=>{
+        console.log(`Barista Sedang meracik ${namaMenu}`);
+
+        setTimeout(()=>{
+            if(namaMenu === "Latte"){
+                resolve(`Kopi ${namaMenu} hangat siap disajikan.`);
+            }else{
+                reject(`Maaf kopi ${namaMenu} tidak tersedia saat ini`);
+            }
+        }, 2000);
+    });
+}
+export {pesanKopi};
