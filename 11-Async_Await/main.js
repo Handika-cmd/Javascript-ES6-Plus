@@ -15,7 +15,7 @@ pesanDanMinumKopi();
 import { coba } from "./second.js";
 async function cobalokal(){
     try{
-        const waktu = await coba();
+        const waktu = await coba;
         console.log(waktu);
     }catch(error){
         console.log(error);

@@ -17,12 +17,14 @@ export {buatKopi};
 
 
 const coba = new Promise((resolve, reject)=>{
-    const waktu = 3000;
+    const waktu = 5000;
     
-    if(waktu < 5000){
-        resolve("Berhasil mencoba");
-    }else{
-        reject("Silahkan coba lagi");
-    }
+    setTimeout(()=>{
+        if(waktu < 5000){
+            resolve("Berhasil mencoba");
+        }else{
+            reject("Silahkan coba lagi");
+        }
+    }, waktu);
 });
 export{coba};
