@@ -1,7 +1,7 @@
 export {buatKopi};
 
 const buatKopi = new Promise((resolve, reject) => {
-  let adaKopi = true; // Coba ubah nanti jadi false
+  let adaKopi = false; // Coba ubah nanti jadi false
 
   console.log("Barista sedang meracik kopi...");
 
