@@ -1,19 +1,15 @@
-export {ambilDataUser};
-// 1. Membuat fungsi yang mengembalikan Promise (simulasi ambil data dari server)
-const buatKopi = new Promise((resolve, reject)=>{
-    let adaKopi = true;
+export {buatKopi};
 
-    if(adaKopi){
-        resolve("Kopi sudah jadi");
-    }else{
-        reject("Kopi tidak jadi dibuat");
+const buatKopi = new Promise((resolve, reject) => {
+  let adaKopi = true; // Coba ubah nanti jadi false
+
+  console.log("Barista sedang meracik kopi...");
+
+  setTimeout(() => {
+    if (adaKopi) {
+      resolve("Kopi Latte hangat berhasil dibuat! ");
+    } else {
+      reject("Maaf, biji kopi habis!");
     }
-}, 2000);
-
-buatKopi
-    .then((hasil)=>{
-        console.log(hasil);
-    })
-    .reject((error)=>{
-        console.log(error);
-    });
+  }, 2000);
+});
