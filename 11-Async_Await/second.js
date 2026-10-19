@@ -9,6 +9,6 @@ function ambilDataUser(){
             }else{
                 reject("Gagal memuat database");
             }
-        }, 2000)
-    })
+        }, 2000);
+    });
 }
