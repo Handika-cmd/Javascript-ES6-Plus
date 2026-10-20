@@ -52,8 +52,8 @@ export const tugasKuliah = new Promise((resolve, reject)=>{
     }, 5000);
 });
 
-
-export const tugas = new Promise((resolve, reject) => {
+export {tugas}
+ const tugas = new Promise((resolve, reject) => {
     const berhasil = true;
 
     console.log("Sedang memuat tugas");
