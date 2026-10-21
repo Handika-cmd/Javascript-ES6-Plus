@@ -1,30 +1,33 @@
-
-// ======================================
-// Buat fungsi yang mengembalikan promise
-function pesanKopi(namaMenu){
+function muatDataMahasiswa(){
     return new Promise((resolve, reject)=>{
-        console.log(`Barista Sedang meracik ${namaMenu}`);
-        let waktu = 3000;
+
+        const waktu = 5000;
+        const berhasil = true;
+
         setTimeout(()=>{
-            if(namaMenu === "Latte" && waktu < 5000){
-                resolve(`Kopi ${namaMenu} hangat siap disajikan.`);
+            if(berhasil){
+                resolve("Data mahasiswa berhasil dimuat");
             }else{
-                reject(`Maaf kopi ${namaMenu} tidak tersedia saat ini`);
-            }
+                reject("Data mahasiswa gagal dimuat");
+            };
         }, waktu);
     });
 }
-export {pesanKopi};
 
-// function buatKopi(namaMenu){
-//     return new Promise((resolve, reject) => {
-//         console.log(`Barista sedang membuat kopi ${namaMenu}`);
+export{muatDataMahasiswa};
 
-//         let waktu = 3000;
-//         setTimeout(()=>{
-//             if(namaMenu ==="latte" && waktu <5000){
-//                 resolve("Kopi hangat")
-//             }
-//         })
-//     })
+// function ambilNama() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve("Handika");
+//         }, 2000);
+//     });
 // }
+// export{ambilNama};
+
+
+// async function ambilNilai() {
+//     return 100;
+// }
+
+// export{ambilNilai};
