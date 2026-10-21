@@ -24,3 +24,24 @@ Tugas kamu:
 2. Di main.js, tampilkan pesan "Memuat jadwal kuliah..." sebelum menjalankan await.
 3. Jika berhasil, tampilkan hasil dari Promise.
 4. Jika gagal, tampilkan pesan error menggunakan catch.
+
+
+<!-- ============================================================================================== -->
+<!-- ============================================================================================== -->
+Misi: Membuat fitur pemuatan dosen ngajar
+
+Spesifikasi fitur
+
+
+File pertama: second-latihan-final.js
+
+Fungsi ambilJadwalDosen() sudah tersedia dan mengembalikan Promise. Jika berhasil = true, Promise mengembalikan "Jadwal dosen berhasil dimuat". Jika false, Promise menolak dengan pesan "Gagal mengambil jadwal dosen". Proses berlangsung selama 2 detik.
+
+File kedua: latihan-final.js
+
+Kamu harus menulis fungsi async bernama tampilkanJadwal() yang:
+1. Menampilkan "Memuat jadwal kuliah..." terlebih dahulu.
+2. Menggunakan await untuk mengambil jadwal.
+3. Jika berhasil, menampilkan "BERHASIL:" beserta hasilnya.
+4. Jika gagal, menampilkan "ERROR:" beserta pesan error.
+5. Memanggil fungsi tampilkanJadwal() agar program berjalan.
