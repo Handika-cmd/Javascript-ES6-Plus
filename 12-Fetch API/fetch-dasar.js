@@ -27,29 +27,31 @@
 // Latihan 1
 
 async function ambilDataPokemon1(...namaPokemon){
-    try{
-        console.log(namaPokemon);
-        // const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${namaPokemon}`);
 
-        if(!response.ok){
-            throw new Error("Gagal mengambil data pokemonnya");
+    for( const nama of namaPokemon){
+        const daftarNamaPokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${nama}`);
+
+        if(!daftarNamaPokemon.ok){
+            throw new Error("Gagal mengambil data pokemon");
         }
 
-        const data = await response.json();
+        const data = await daftarNamaPokemon.json();
 
         console.log("Nama: ", data.name);
         console.log("Id: ", data.id);
         console.log("Tinggi: ", data.height);
         console.log("Berat: ", data.weight);
-        console.log("Kemampuan: ",data.abilities.map((item) => item.ability.name).join(", "));
-    }catch(err){
-        console.log("Gagal: ",err.message);
+        console.log("Kemampuan: ", data.abilities.map((item)=> item.ability.name).join(", "));
+        console.log(`Mengambil data pokemon ${data.name} Selesai.`);
     }
 };
-
-
-ambilDataPokemon1("pikachu", "Charmander", "Squirtle");
+ambilDataPokemon1("pikachu", "charmander", "squirtle");
 
 // =================================================================================
 // =================================================================================
 // Latihan 2: Konsep baru
+
+// const namaPokemon = ["Pikachu", "Charmander", "Squirtle"];
+// for (const nama of namaPokemon){
+//     console.log(nama);
+// }
