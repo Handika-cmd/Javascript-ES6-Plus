@@ -29,23 +29,28 @@
 async function ambilDataPokemon1(...namaPokemon){
 
     for( const nama of namaPokemon){
-        const daftarNamaPokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${nama}`);
-
-        if(!daftarNamaPokemon.ok){
-            throw new Error("Gagal mengambil data pokemon");
+        try{
+            const daftarNamaPokemon = await fetch(`https://pokeapi.co/api/v2/pokemon/${nama}`);
+    
+            if(!daftarNamaPokemon.ok){
+                throw new Error("Gagal mengambil data pokemon");
+            }
+    
+            const data = await daftarNamaPokemon.json();
+    
+            console.log("Nama: ", data.name);
+            console.log("Id: ", data.id);
+            console.log("Tinggi: ", data.height);
+            console.log("Berat: ", data.weight);
+            console.log("Kemampuan: ", data.abilities.map((item)=> item.ability.name).join(", "));
+            
+        }catch(err){
+            console.log("Ada masalah: ", err.message);
         }
-
-        const data = await daftarNamaPokemon.json();
-
-        console.log("Nama: ", data.name);
-        console.log("Id: ", data.id);
-        console.log("Tinggi: ", data.height);
-        console.log("Berat: ", data.weight);
-        console.log("Kemampuan: ", data.abilities.map((item)=> item.ability.name).join(", "));
-        console.log(`Mengambil data pokemon ${data.name} Selesai.`);
     }
+    console.log("Semua data pokemon selesai");
 };
-ambilDataPokemon1("pikachu", "charmander", "squirtle");
+ambilDataPokemon1("pikachuu", "charmander", "squirtle");
 
 // =================================================================================
 // =================================================================================
