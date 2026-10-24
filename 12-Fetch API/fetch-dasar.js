@@ -26,9 +26,10 @@
 // ==================================================================================
 // Latihan 1
 
-async function ambilDataPokemon1(){
+async function ambilDataPokemon1(...namaPokemon){
     try{
-        const response = await fetch("https://pokeapi.co/api/v2/pokemon/Charizard");
+        console.log(namaPokemon);
+        // const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${namaPokemon}`);
 
         if(!response.ok){
             throw new Error("Gagal mengambil data pokemonnya");
@@ -46,7 +47,8 @@ async function ambilDataPokemon1(){
     }
 };
 
-ambilDataPokemon1();
+
+ambilDataPokemon1("pikachu", "Charmander", "Squirtle");
 
 // =================================================================================
 // =================================================================================
