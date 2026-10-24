@@ -37,7 +37,7 @@ async function ambilDataPokemon(){
         console.log("Id: ", data.id);
         console.log("Tinggi: ", data.height);
         console.log("Berat: ", data.weight);
-        console.log("Ketahanan: ",data.abilities.map(item => item.ability.name));
+        console.log("Ketahanan: ",data.abilities.map((item) => item.ability.name));
     }catch(err){
         console.log("Gagal: ",err.message);
     }
