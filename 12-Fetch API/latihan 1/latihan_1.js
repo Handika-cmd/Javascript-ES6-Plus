@@ -22,3 +22,12 @@ async function ambilDataPokemon(...namaPokemon){
     console.log("Mengambil data pokemon selesai");
 }
 ambilDataPokemon("pikachu", "salahnama123", "bulbasaur");
+
+async function ambilDataUsers(...namaUser){
+
+    for (const nama of namaUser){
+        try{
+            const daftarUsers = await fetch("https://jsonplaceholder.typicode.com/users")
+        }
+    }
+}
