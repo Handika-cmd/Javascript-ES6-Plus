@@ -38,7 +38,7 @@ async function ambilDataPokemon1(...namaPokemon){
     
             const data = await daftarNamaPokemon.json();
     
-            console.log("Nama: ", data.name);
+            console.log("Nama: ", data.name.charAt(0).toUpperCase());
             console.log("Id: ", data.id);
             console.log("Tinggi: ", data.height);
             console.log("Berat: ", data.weight);
@@ -54,9 +54,3 @@ ambilDataPokemon1("pikachuu", "charmander", "squirtle");
 
 // =================================================================================
 // =================================================================================
-// Latihan 2: Konsep baru
-
-// const namaPokemon = ["Pikachu", "Charmander", "Squirtle"];
-// for (const nama of namaPokemon){
-//     console.log(nama);
-// }
