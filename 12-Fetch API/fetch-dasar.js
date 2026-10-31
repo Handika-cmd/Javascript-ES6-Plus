@@ -51,6 +51,3 @@ async function ambilDataPokemon1(...namaPokemon){
     console.log("Semua data pokemon selesai");
 };
 ambilDataPokemon1("pikachuu", "charmander", "squirtle");
-
-// =================================================================================
-// =================================================================================
